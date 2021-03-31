@@ -26,7 +26,7 @@ $(function () {
         const file_name = 'بطاقة المعايدة'
         const element = document.createElement('a')
         element.setAttribute("href", data_URL)
-        element.setAttribute("download", file_name + ".png")
+        // element.setAttribute("download", file_name + ".png")
         element.setAttribute("title", file_name)
         element.setAttribute("class", "btn btn-primary text-light")
         element.setAttribute("id", "save")
