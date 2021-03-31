@@ -21,14 +21,15 @@ $(function () {
         canvas_id = 'card_canvas'
         var canvas = document.getElementById(canvas_id);
         var data_URL = canvas.toDataURL();
-
-        const file_name = 'بطاقة المعايدة'
-        const element = document.createElement('a')
-        element.setAttribute("href", data_URL)
-        element.setAttribute("download", file_name + ".png")
-        document.body.appendChild(element)
-        element.click()
-        element.remove()
+        window.open(data_URL);
+        // const file_name = 'بطاقة المعايدة'
+        // const element = document.createElement('a')
+        // element.setAttribute("href", data_URL)
+        // element.setAttribute("download", file_name + ".png")
+        // element.setAttribute("title", file_name)
+        // document.body.appendChild(element)
+        // element.click()
+        // element.remove()
     }
 
 
