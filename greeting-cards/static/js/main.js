@@ -14,26 +14,27 @@ $(function () {
         var x = 450
         var y = 550
         ctx.fillText(get_input_text(), x, y);
+        update_save_link()
     }
 
 
-    function download_card() {
+    function update_save_link() {
+        $('#save').remove()
         canvas_id = 'card_canvas'
         var canvas = document.getElementById(canvas_id);
         var data_URL = canvas.toDataURL();
-        window.open(data_URL);
-        // const file_name = 'بطاقة المعايدة'
-        // const element = document.createElement('a')
-        // element.setAttribute("href", data_URL)
-        // element.setAttribute("download", file_name + ".png")
-        // element.setAttribute("title", file_name)
-        // document.body.appendChild(element)
-        // element.click()
-        // element.remove()
+        const file_name = 'بطاقة المعايدة'
+        const element = document.createElement('a')
+        element.setAttribute("href", data_URL)
+        element.setAttribute("download", file_name + ".png")
+        element.setAttribute("title", file_name)
+        element.setAttribute("class", "btn btn-primary text-light")
+        element.setAttribute("id", "save")
+        element.innerHTML = 'حمل المعايدة'
+        document.getElementById('card_form').appendChild(element)
     }
 
 
-    $('#save').on('click', download_card)
     $('#card_name').on('keyup', draw)
 
     draw()
