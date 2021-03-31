@@ -38,44 +38,23 @@
 
 
 
-    <div class="container d-flex flex-wrap justify-content-center">
+    <div class="container d-flex flex-wrap justify-content-center py-5">
 
-        <canvas id="card_canvas" width="640" height="640"></canvas>
+        <canvas id="card_canvas" width="700" height="700"></canvas>
 
         <div class="pt-5">
             <div class="form-group">
-                <label for="card_name">الإسم:</label>
-                <input onkeyup="draw('card_canvas')" class="form-control" id="card_name">
+                <label for="card_name">ادخل أسمك</label>
+                <input class="form-control" id="card_name">
             </div>
-            <button onclick="download_card('card_canvas')" class="btn btn-primary">تحميل الصورة</button>
+            <button id="save" class="btn btn-primary">حمل المعايدة</button>
         </div>
     </div>
 
+    <img src="./static/images/greeting.jpg" class="d-none" id="canvas_image">
 
 
     <footer class="bg-light text-center text-lg-start">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Footer text</h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                        aliquam voluptatem veniam, est atque cumque eum delectus sint!
-                    </p>
-                </div>
-
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Footer text</h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                        aliquam voluptatem veniam, est atque cumque eum delectus sint!
-                    </p>
-                </div>
-            </div>
-        </div>
-
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2021 Copyright:
             <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
