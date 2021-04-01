@@ -9,10 +9,10 @@ $(function () {
         var ctx = document.getElementById(canvas_id).getContext('2d');
         var image = document.getElementById("canvas_image");
         ctx.drawImage(image, 0, 0);
-        ctx.fillStyle = '#FFFFFF';
+        ctx.fillStyle = '#5a5383';
         ctx.font = '28px Cairo';
-        var x = 450
-        var y = 550
+        var x = 250
+        var y = 100
         ctx.fillText(get_input_text(), x, y);
         update_save_link()
     }
@@ -36,6 +36,7 @@ $(function () {
 
 
     $('#card_name').on('keyup', draw)
-
+    $('#canvas_image').on('load', draw)
+    setInterval(draw, 1000);
     draw()
 });
